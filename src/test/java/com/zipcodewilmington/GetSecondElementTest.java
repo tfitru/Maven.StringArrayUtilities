@@ -1,7 +1,8 @@
 package com.zipcodewilmington;
 
-import org.junit.Assert;
-import org.junit.Test;
+
+import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.Test;
 
 public class GetSecondElementTest {
 
@@ -11,7 +12,7 @@ public class GetSecondElementTest {
         String[] array = {"the", "quick", "brown", "fox", "jumps", "over", "the", "lazy", "dog"};
         String expected = "quick";
         String actual = StringArrayUtils.getSecondElement(array);
-        Assert.assertEquals(expected, actual);
+        Assertions.assertEquals(expected, actual);
     }
 
     @Test
@@ -19,7 +20,7 @@ public class GetSecondElementTest {
         String[] array = {"quick", "brown", "fox", "jumps", "over", "the", "lazy", "dog"};
         String expected = "brown";
         String actual = StringArrayUtils.getSecondElement(array);
-        Assert.assertEquals(expected, actual);
+        Assertions.assertEquals(expected, actual);
     }
 
 
@@ -28,6 +29,6 @@ public class GetSecondElementTest {
         String[] array = {"brown", "fox", "jumps", "over", "the", "lazy", "dog"};
         String expected = "fox";
         String actual = StringArrayUtils.getSecondElement(array);
-        Assert.assertEquals(expected, actual);
+        Assertions.assertEquals(expected, actual);
     }
 }

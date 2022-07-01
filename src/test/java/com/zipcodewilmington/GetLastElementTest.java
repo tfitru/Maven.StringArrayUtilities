@@ -1,7 +1,7 @@
 package com.zipcodewilmington;
 
-import org.junit.Assert;
-import org.junit.Test;
+import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.Test;
 
 public class GetLastElementTest {
 
@@ -10,7 +10,7 @@ public class GetLastElementTest {
         String[] array = {"the", "quick", "brown", "fox", "jumps", "over", "the", "lazy", "dog"};
         String expected = "dog";
         String actual = StringArrayUtils.getLastElement(array);
-        Assert.assertEquals(expected, actual);
+        Assertions.assertEquals(expected, actual);
     }
 
     @Test
@@ -18,7 +18,7 @@ public class GetLastElementTest {
         String[] array = {"the", "quick", "brown", "fox", "jumps", "over", "the", "lazy"};
         String expected = "lazy";
         String actual = StringArrayUtils.getLastElement(array);
-        Assert.assertEquals(expected, actual);
+        Assertions.assertEquals(expected, actual);
     }
 
 
@@ -27,6 +27,6 @@ public class GetLastElementTest {
         String[] array = {"the", "quick", "brown", "fox", "jumps", "over"};
         String expected = "over";
         String actual = StringArrayUtils.getLastElement(array);
-        Assert.assertEquals(expected, actual);
+        Assertions.assertEquals(expected, actual);
     }
 }

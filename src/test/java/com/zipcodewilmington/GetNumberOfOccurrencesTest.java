@@ -1,7 +1,7 @@
 package com.zipcodewilmington;
 
-import org.junit.Assert;
-import org.junit.Test;
+import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.Test;
 
 public class GetNumberOfOccurrencesTest {
 
@@ -11,7 +11,7 @@ public class GetNumberOfOccurrencesTest {
         String[] array = {"aba", "aba", "baa", "bab", "bba", "bba", "bba", "bba", "bbb", "bbb"};
         int expected = 4;
         int actual = StringArrayUtils.getNumberOfOccurrences(array, "bba");
-        Assert.assertEquals(actual, expected);
+        Assertions.assertEquals(actual, expected);
     }
 
     @Test
@@ -19,7 +19,7 @@ public class GetNumberOfOccurrencesTest {
         String[] array = {"aba", "aba", "baa", "bab", "bba", "bba", "bba", "bba", "bbb", "bbb"};
         int expected = 2;
         int actual = StringArrayUtils.getNumberOfOccurrences(array, "bbb");
-        Assert.assertEquals(actual, expected);
+        Assertions.assertEquals(actual, expected);
     }
 
     @Test
@@ -27,7 +27,7 @@ public class GetNumberOfOccurrencesTest {
         String[] array = {"aba", "aba", "baa", "bab", "bba", "bba", "bba", "bba", "bbb", "bbb"};
         int expected = 4;
         int actual = StringArrayUtils.getNumberOfOccurrences(array, "bba");
-        Assert.assertEquals(actual, expected);
+        Assertions.assertEquals(actual, expected);
     }
 
 }

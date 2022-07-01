@@ -1,13 +1,12 @@
 package com.zipcodewilmington;
 
 import org.junit.Assert;
-import org.junit.Test;
 
 public class GetConsecutiveDuplicatesTest {
 
 
 
-    @Test
+    @org.junit.Test
     public void testRemoveConsecutiveDuplicates1() {
         String[] array = {"aba", "aba", "baa", "bab", "bba", "bba", "bba", "bba", "bbb", "bbb"};
         String[] actual = StringArrayUtils.removeConsecutiveDuplicates(array);
@@ -17,7 +16,7 @@ public class GetConsecutiveDuplicatesTest {
 
 
 
-    @Test
+    @org.junit.Test
     public void testRemoveConsecutiveDuplicates2() {
         String[] array = {"aba", "aba", "baa", "bab", "bba", "zzz", "bba", "bba", "bba", "bbb", "bbb"};
         String[] actual = StringArrayUtils.removeConsecutiveDuplicates(array);
@@ -26,7 +25,7 @@ public class GetConsecutiveDuplicatesTest {
     }
 
 
-    @Test
+    @org.junit.Test
     public void testRemoveConsecutiveDuplicates3() {
         String[] array = {"aba", "aba", "baa", "bab", "bba", "zzz", "bba", "bba", "bba", "aba", "bbb"};
         String[] actual = StringArrayUtils.removeConsecutiveDuplicates(array);

@@ -8,17 +8,6 @@ import java.util.*;
  */
 public class StringArrayUtils {
 
-//    public static void main(String[] args) {
-//        String[] array = {"The", "quick", "brown", "fox", "jumps", "over", "the", "lazy", "dog"};
-//        String valueToRemove = "The";
-//
-//
-//
-//    }
-//
-//        System.out.println(fitArray.toString());
-//
-//}
 
 
     /**
@@ -84,9 +73,26 @@ public class StringArrayUtils {
         rArray = list.toArray(array);
 
         return rArray;
-
-
     }
+
+    // reverse in place code
+//       int x = 0;
+//       String[] anotherArray = new String[array.length];
+//       for(int i = 0; i<array.length; i++) {
+//           System.out.println(array[i].equals(valueToRemove));
+//           if(array[i].equals(valueToRemove)){
+//               x += array[i].indexOf(valueToRemove);
+//               System.out.println(x);
+//           }
+//       }
+
+//       System.out.println(x);
+//
+//
+//
+//
+//       return anotherArray;
+
 
     /**
      * @param array array of String objects
@@ -151,23 +157,6 @@ public class StringArrayUtils {
 
         return x;
 
-// reverse in place code
-//       int x = 0;
-//       String[] anotherArray = new String[array.length];
-//       for(int i = 0; i<array.length; i++) {
-//           System.out.println(array[i].equals(valueToRemove));
-//           if(array[i].equals(valueToRemove)){
-//               x += array[i].indexOf(valueToRemove);
-//               System.out.println(x);
-//           }
-//       }
-
-//       System.out.println(x);
-//
-//
-//
-//
-//       return anotherArray;
 
 
     }
@@ -178,21 +167,30 @@ public class StringArrayUtils {
      */ // TODO
     public static String[] removeConsecutiveDuplicates(String[] array) {
 
-
-        int co = 0;
+        // set a counter
+        int counter = 0;
+        // set a length variable to array length
         int len = array.length;
-        String[] zList = new String[len];
+        // Create a string array
+        String[] arrayNew = new String[len];
+        // for loop to iterate through the array from top to bottom
         for(int i = 0; i < array.length; i++) {
-            zList[co] = array[i];
-            while(i + 1 < array.length && zList[co].equals(array[i+1])) {
-                zList[co] = array[i];
+            // set the index value of the array to the new array
+            arrayNew[counter] = array[i];
+            // while the index + 1 is less than the array length
+            // and the new value in the array equals to the next value in the array
+            while(i + 1 < array.length && arrayNew[counter].equals(array[i+1])) {
+                // set the array to the same value
+                arrayNew[counter] = array[i];
+                // increase the index value
                 i++;
 
             }
-            co++;
+            // increase the counter
+            counter++;
         }
-        String[] finalList = new String[co];
-        finalList = Arrays.copyOfRange(zList, 0, co);
+        String[] finalList = new String[counter];
+        finalList = Arrays.copyOfRange(arrayNew, 0, counter);
 
         return finalList;
 
@@ -228,33 +226,34 @@ public class StringArrayUtils {
     //
         public static String[] packConsecutiveDuplicates (String[]array){
             // create an integer as a counter
-            int co = 0;
+            int counter = 0;
             // set the length of the array to a variable
             int len = array.length;
             // set a new string to the length of the array
-            String[] zList = new String[len];
+            String[] arrayHold = new String[len];
 
             // for loop through the length of the array
             for(int i = 0; i< len; i++){
                 // set zList count = to the array value (making a copy)
-                zList[co] = array[i];
+                arrayHold[counter] = array[i];
 
                 // while the index plus 1 is less than the length and
                 // the array index equals to the next array
                 while (i + 1 < len && array[i].equals(array[i + 1])) {
                     // add the array value to the list
-                    zList[co] += array[i];
+                    arrayHold[counter] += array[i];
                     // increment the while loop by 1
                     i++;
                 }
                 // increment the counter by 1
-                co++;
+                counter++;
                 }
 
             // set the final list = to the arrays.copyOfRange(original array, integer from,integer to);
+            // Arrays.copyOfRange copies the specified range of specified array into a new array
             //
 
-            String[] finalList = Arrays.copyOfRange(zList, 0, co);
+            String[] finalList = Arrays.copyOfRange(arrayHold, 0, counter);
 
 
 
